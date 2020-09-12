@@ -13,9 +13,9 @@
 2. 安装：Tesseract-OCR 的安装较为简单，一直点击下一步即可
 3. 添加到环境变量中
 
-![image](images\clipboard1.png)
+![image](images/clipboard1.png)
 
-![image](images\clipboard2.png)
+![image](images/clipboard2.png)
 
 ### 二：安装 python 依赖
 
@@ -38,7 +38,7 @@ code = pytesseract.image_to_string(th, lang='chi_sim+eng', config=tessdata_dir_c
 print(code)
 ```
 
-![image](images\clipboard3.png)
+![image](images/clipboard3.png)
 
 ## 注意事项
 
