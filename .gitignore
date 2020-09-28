@@ -1,2 +1,5 @@
 # virtualenv
 week*-venv/
+
+# config
+week*/config.json
