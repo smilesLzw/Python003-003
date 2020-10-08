@@ -263,7 +263,7 @@ class User(UserMixin, db.Model):
 
 `__bases` 查看继承关系
 
-![image](0E45903A2E1E4AA88D6D1162D6CC168D)
+![image](clipboard.png)
 
 ## 类的继承
 
