@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>什么值得买</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">首页</a>
+        <form action="" method="post" class="form-inline">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2" name="search" value="{{search}}" type="search" placeholder="搜索">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+        </form>
+    </nav>
+    <div class="container">
+        <h3 class="mt-5 mb-3">什么值得买：手机</h3>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">ID</th>
+<!--                    <th scope="col">用户昵称</th>-->
+                    <th scope="col">评论</th>
+                    <th scope="col" class="text-nowrap">舆情</th>
+                    <th scope="col">评论时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for comment in comments %}
+                <tr>
+                    <th>{{ comment.id }}</th>
+<!--                    <th>{{ comment.nickname }}</th>-->
+                    <td>{{ comment.comment }}</td>
+                    <td>{{ comment.sentiment }}</td>
+                    <td class="text-nowrap">{{ comment.comment_time }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
